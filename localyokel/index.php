@@ -1,0 +1,478 @@
+<html>
+<style>
+body {background-color: #142440;color: #f1f1f1;}
+html {  scroll-padding-top: 90px; 
+  scroll-behavior: smooth;}
+
+ul {
+
+list-style-type: none;
+margin: 0;
+padding: 0;
+overflow: hidden;
+
+
+}
+li {
+float: left;
+margin-left: 10px; 
+}
+li a, .dropbtn {
+display: block;
+color: black;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+background-color: grey;
+}
+
+li.dropdown {
+display: block;
+}
+a {
+  color: aliceblue;
+}
+.dropdown-content {
+display: none;
+position: absolute;
+background-color: #f9f9f9;
+min-width: 20px;
+
+z-index: 1;
+float: none;
+}
+
+.dropdown-content li, a {
+color: black;
+padding: 5px 8px;
+text-decoration: none;
+display: block;
+text-align: left;
+float: none;
+
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;color: black;}
+
+.dropdown:hover .dropdown-content {
+display: block;
+float: none;
+;
+}
+/* division */ 
+.navbar {
+  overflow: visible;
+  background-color: whitesmoke;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  
+}
+
+
+
+
+ul.navbar {
+  background: lightblue url(Grey_teal.JPG) no-repeat center;
+  background-size: cover;
+  align-items: center;
+  color: aliceblue;
+  justify-content: center;
+  height: 100;
+  padding-top: 20;
+  font-size: 2vw;
+  font-weight: 600;
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: -6.9;
+  display: flex; 
+  width: 100%;
+}
+
+.propaganda {
+  overflow: visible;
+  background-color: whitesmoke;
+  position: fixed;
+  bottom: 0;
+  width: 120%;
+  
+}
+
+
+
+
+ul.propaganda {
+  background: lightblue url(Grey_teal.JPG) no-repeat center;
+  background-size: cover;
+  align-items: center;
+  color: aliceblue;
+  justify-content: center;
+  height: 70;
+  padding-top: 20;
+  font-size: 1vw;
+  font-weight: 600;
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: -6.9;
+  display: flex; 
+  width: 100%;
+  float: left;
+}
+li.propaganda {
+  align-items: center;
+  color: aliceblue;
+  justify-content: center;
+  height: 70;
+  padding-top: 20;
+  font-size: 1vw;
+  font-weight: 600;
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: -6.9;
+  display: flex; 
+  width: 100%;
+   z-index: 100;
+}
+iframe.propaganda {
+  align-items: center;
+  color: aliceblue;
+  justify-content: center;
+  height: 70;
+  padding-top: 20;
+  font-size: 1vw;
+  font-weight: 600;
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: -6.9;
+  display: flex; 
+  width: 100%;
+  
+}
+
+.button {
+    background-color: #007bff;   
+  color: #ffffff;           
+  padding: 12px 24px;         
+
+  border-radius: 6px;          
+  border: 2px solid #0056b3;   
+
+  font-family: sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;  
+  letter-spacing: 0.5px;
+  
+
+  cursor: pointer;
+  transition: all 0.3s ease;  
+}
+
+
+
+.search-container {
+  font-size: 1vw;
+}
+
+.instruction {
+  width: 50%;       /* Element must be narrower than its parent */
+  margin: 0 auto;   /* 0 for top/bottom, auto handles left/right spacing */
+  display: block;
+}
+.main {
+  padding: 0px;
+  margin-top: 70px;
+  height: 100px;
+  margin-left: 70px;
+  
+}
+/* Container holds both images in the same exact spot */
+.image-container {
+  position: relative;
+  display: inline-block;
+  width: 300px; /* Adjust to match your image size */
+  height: 200px;
+}
+
+/* Base setup for both images */
+.image-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+}
+
+/* Hide the hover image by making it transparent */
+.hover-image {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out; /* Controls the fade speed */
+}
+
+/* Reveal the hover image when mousing over the container */
+.image-container:hover .hover-image {
+  opacity: 1;
+}
+
+
+.marquee-container {
+  overflow: hidden;
+  width: 100%;
+  background: rgba(21, 34, 82, 0.5);
+  /* Modern frosted glass blur effect */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); 
+  padding: 1rem 0;
+}
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: scroll-ltr 10s linear infinite;
+}
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+.marquee-text {
+  display: flex;
+  white-space: nowrap;
+}
+.marquee-text a {
+  
+  color: #00ffcc;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 0 2rem; 
+}
+.marquee-text a:hover {
+  text-decoration: underline;
+}
+
+@keyframes scroll-ltr {
+  from { transform: translateX(50%); }
+  to { transform: translateX(0); }
+}
+
+</style>
+<ul class="navbar" >
+<li><a href="index.html" style="  color: aliceblue; ">Local</a></li>
+<li><a href="games/index.html" style="  color: aliceblue;">Games</a></li>
+<li class="dropdown">
+  <a href="quotes.html" class="dropbtn" style="  color: aliceblue">Quotes</a>
+  <ul class="dropdown-content">
+    <li><a href="quotes.html#Sise" style="font-size: 1rem;" >Mr Sise</a></li>
+    <li><a href="quotes.html#Assorted" style="font-size: 1rem;" >Assorted</a></li>
+  </ul>
+  </li>
+<li><a href="    about.html" style="  color: aliceblue; ">About</a></li>
+<li><a href="    liedetector.html" style="  color: aliceblue; ">TRUTH</a></li>
+
+</ul>
+<ul class="propaganda">
+<li>
+<div class="marquee-container">
+  <div class="marquee-track">
+    <div class="marquee-text">
+      <a href="    propaganda/flock.html" style="color:White;">Flock cameras are replacing all the drone birds that America is killing, Thats why their called Flock<sub> Like how birds flock</sub></a> &nbsp;&nbsp;&nbsp;
+      <a href="    games/Fish 4 life.html" style="color:white;">FISH 4 LIFE PLAY IT NOW</a> &nbsp;&nbsp;&nbsp;
+      <a href="    propaganda/busdriver.html" style="color:white;">SHOULD I GIVE THE DRIVER MY COINS!!!!</a> &nbsp;&nbsp;&nbsp;
+      <a href="    propaganda/geoguess.html" style="color:white;">THE GOVERNMENT IS USING VIDEOGAMES FOR SURVELIENCE</a> &nbsp;&nbsp;&nbsp;
+
+    </div>
+    <div class="marquee-text" aria-hidden="true">
+      <a href="    propaganda/flock.html" style="color:White;">Flock cameras are replacing all the drone birds that America is killing, Thats why their called Flock<sub> Like how birds flock</sub></a> &nbsp;&nbsp;&nbsp;
+      <a href="    games/Fish 4 life.html" style="color:white;">FISH 4 LIFE PLAY IT NOW</a> &nbsp;&nbsp;&nbsp;
+      <a href="    propaganda/busdriver.html" style="color:white;">SHOULD I GIVE THE DRIVER MY COINS!!!!</a> &nbsp;&nbsp;&nbsp;
+      <a href="    propaganda/geoguess.html" style="color:white;">THE GOVERNMENT IS USING VIDEOGAMES FOR SURVELIENCE</a> &nbsp;&nbsp;&nbsp;      
+
+    </div>
+  </div>
+</div>
+
+</li>
+</ul>
+    <head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+      <link id="favicon" rel="icon" type="image/png" href="metalcoin.png">
+
+
+
+<style>
+
+</style>
+
+
+</marquee>
+</ul>
+
+    <script>
+      var message = new Array();
+      var reps = 4;
+      var speed = 100;
+      var p = message.length;
+      var T = "";
+      var C = 0;
+      var mC = 0;
+      var s = 0;
+      var sT = null;
+      if (reps < 1) reps = 1;
+
+      function doTheThing() {
+        T = message[mC];
+        A();
+      }
+
+      function A() {
+        s++;
+        if (s > 11) {
+          s = 1;
+        }
+        if (s == 1) {
+          document.title = "L/ocal Yokel";
+          const promo = "/Play Peak"
+
+        }
+        if (s == 2) {
+          document.title = "Lo/cal Yokel";
+          const promo = "P/lay Peak"
+                  
+        }
+        if (s == 3) {
+          document.title = "Loc/al Yokel";
+          const promo = "Pl/ay Peak"          
+        }
+        if (s == 4) {
+          document.title = "Loca/l Yokel";
+          const promo = "Pla/y Peak"           
+        }
+        if (s == 5) {
+          document.title = "Local/ Yokel";
+          const promo = "Play/ Peak"           
+        }
+        if (s == 6) {
+          document.title = "Local /Yokel";
+          const promo = "Play /Peak"               
+        }
+        if (s == 7) {
+          document.title = "Local Y/okel";
+          const promo = "Play P/eak"           
+        }
+        if (s == 8) {
+          document.title = "Local Yo/kel";
+          const promo = "Play Pe/ak"             
+        }
+        if (s == 9) {
+          document.title = "Local Yok/el";
+          const promo = "Play Pea/k"
+                    
+        }
+        if (s == 10) {
+          document.title = "Local Yoke/l";
+          const promo = "Play Peak/";
+           
+        }
+        if (s == 11) {
+          document.title = "Local Yokel/";
+          const promo = "Play Peak!";
+              
+        }             
+        if (C < 11 * reps) {
+          sT = setTimeout("A()", speed);
+          C++;
+        } else {
+          C = 0;
+          s = 0;
+          mC++;
+          if (mC > p - 1) mC = 0;
+          sT = null;
+          doTheThing();
+        }
+      }
+      doTheThing();
+
+      function playAudio() {
+        var audio = document.getElementById("audio");
+        if (audio.paused) {
+          audio.play();
+        } else {
+          audio.pause();
+        }
+      }
+    </script><title>/Local Yokel&lt;</title>
+
+
+</head>
+
+ <body>
+
+
+
+
+</li>
+</ul>
+
+<h1>LOCAL</h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="main"  style="display: flex; justify-content: center; padding-top: 70px;">
+  <p><button  type="button" class="button"><p id="demo"></p></button></p>
+
+</div>
+
+
+<script>
+
+document.getElementById("demo").innerHTML = localStorage.clickcount;
+
+function clickCounter() {
+  if (localStorage.clickcount) {
+    localStorage.clickcount = Number(localStorage.clickcount)+1;
+  } else {
+    localStorage.clickcount = 1;
+  }
+document.getElementById("demo").innerHTML = localStorage.clickcount;
+}
+</script>
+<div>
+<script>
+
+let texts = [
+  "Flock cameras are replacing all the drone birds that America is killing, Thats why their called Flock<sub> Like how birds flock</sub>",
+  "FISH 4 LIFE PLAY IT NOW",
+  "SHOULD I GIVE THE DRIVER MY COINS!!!!",
+  "THE GOVERNMENT IS USING VIDEOGAMES FOR SURVELIENCE"
+];
+let ref = [
+    "    propaganda/flock.html",
+    "    games/Fish 4 life.html",
+    "    propaganda/busdriver.html",
+    "    propaganda/geoguess.html"
+]
+let number = Math.floor(Math.random()*texts.length)
+text = texts[number];
+loc = ref[number]
+
+document.write('<a class="main" style="color: white;" href="' + loc + '">' + text +'</a>');
+</script>
+</div>
+
+</body>
+</html>
