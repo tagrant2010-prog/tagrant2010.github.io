@@ -1,7 +1,48 @@
 <html>
-<html>
-<html>
+    <head>
+    <meta charset="UTF-8">
+    <title>Coin Animation</title>
+
+    <link id="favicon" rel="icon" type="image/png" href="greencoin.png">
+</head>
+
 <style>
+.main {
+  padding: 0px;
+  margin-top: 70px;
+  height: 1500px;
+  margin-left: 70px;
+  
+}
+/* Container holds both images in the same exact spot */
+.image-container {
+  position: relative;
+  display: inline-block;
+  width: 300px; /* Adjust to match your image size */
+  height: 200px;
+}
+
+/* Base setup for both images */
+.image-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+}
+
+/* Hide the hover image by making it transparent */
+.hover-image {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out; /* Controls the fade speed */
+}
+
+/* Reveal the hover image when mousing over the container */
+.image-container:hover .hover-image {
+  opacity: 1;
+}
+
 body {background-color: #142440;color: #f1f1f1;}
 html {  scroll-padding-top: 90px; 
   scroll-behavior: smooth;}
@@ -262,17 +303,17 @@ iframe.propaganda {
 
 </style>
 <ul class="navbar" >
-<li><a href="../index.html" style="  color: aliceblue; ">Local</a></li>
-<li><a href="../games/index.html" style="  color: aliceblue;">Games</a></li>
+<li><a href="    index.html" style="  color: aliceblue; ">Local</a></li>
+<li><a href="    games/index.html" style="  color: aliceblue;">Games</a></li>
 <li class="dropdown">
-  <a href="../quotes.html" class="dropbtn" style="  color: aliceblue">Quotes</a>
+  <a href="    quotes.html" class="dropbtn" style="  color: aliceblue">Quotes</a>
   <ul class="dropdown-content">
-    <li><a href="../quotes.html#Sise" style="font-size: 1rem;" >Mr Sise</a></li>
-    <li><a href="../quotes.html#Assorted" style="font-size: 1rem;" >Assorted</a></li>
+    <li><a href="    quotes.html#Sise" style="font-size: 1rem;" >Mr Sise</a></li>
+    <li><a href="    quotes.html#Assorted" style="font-size: 1rem;" >Assorted</a></li>
   </ul>
   </li>
-<li><a href="    ../about.html" style="  color: aliceblue; ">About</a></li>
-<li><a href="    ../liedetector.html" style="  color: aliceblue; ">TRUTH</a></li>
+<li><a href="    about.html" style="  color: aliceblue; ">About</a></li>
+<li><a href="    liedetector.html" style="  color: aliceblue; ">TRUTH</a></li>
 
 </ul>
 <ul class="propaganda">
@@ -280,21 +321,25 @@ iframe.propaganda {
 <div class="marquee-container">
   <div class="marquee-track">
     <div class="marquee-text">
-      <a href="    ../propaganda/flock.html" style="color:White;">Flock cameras are replacing all the drone birds that America is killing, Thats why their called Flock<sub> Like how birds flock</sub></a> &nbsp;&nbsp;&nbsp;
-      <a href="   ../games/Fish 4 life.html" style="color:white;">FISH 4 LIFE PLAY IT NOW</a> &nbsp;&nbsp;&nbsp;
-      <a href="    ../propaganda/busdriver.html" style="color:white;">SHOULD I GIVE THE DRIVER MY COINS!!!!</a> &nbsp;&nbsp;&nbsp;
-      <a href="    ../propaganda/geoguess.html" style="color:white;">THE GOVERNMENT IS USING VIDEOGAMES FOR SURVELIENCE</a> &nbsp;&nbsp;&nbsp;
+      <a href="    propaganda/flock.html" style="color:White;">Flock cameras are replacing all the drone birds that America is killing, Thats why their called Flock<sub> Like how birds flock</sub></a> &nbsp;&nbsp;&nbsp;
+      <a href="    games/Fish 4 life.html" style="color:white;">FISH 4 LIFE PLAY IT NOW</a> &nbsp;&nbsp;&nbsp;
+      <a href="    propaganda/busdriver.html" style="color:white;">SHOULD I GIVE THE DRIVER MY COINS!!!!</a> &nbsp;&nbsp;&nbsp;
+      <a href="    propaganda/geoguess.html" style="color:white;">THE GOVERNMENT IS USING VIDEOGAMES FOR SURVELIENCE</a> &nbsp;&nbsp;&nbsp;
 
     </div>
     <div class="marquee-text" aria-hidden="true">
-      <a href="    ../propaganda/flock.html" style="color:White;">Flock cameras are replacing all the drone birds that America is killing, Thats why their called Flock<sub> Like how birds flock</sub></a> &nbsp;&nbsp;&nbsp;
-      <a href="    ../games/Fish 4 life.html" style="color:white;">FISH 4 LIFE PLAY IT NOW</a> &nbsp;&nbsp;&nbsp;
-      <a href="    ../propaganda/busdriver.html" style="color:white;">SHOULD I GIVE THE DRIVER MY COINS!!!!</a> &nbsp;&nbsp;&nbsp;
-      <a href="    ../propaganda/geoguess.html" style="color:white;">THE GOVERNMENT IS USING VIDEOGAMES FOR SURVELIENCE</a> &nbsp;&nbsp;&nbsp;      
+      <a href="    propaganda/flock.html" style="color:White;">Flock cameras are replacing all the drone birds that America is killing, Thats why their called Flock<sub> Like how birds flock</sub></a> &nbsp;&nbsp;&nbsp;
+      <a href="    games/Fish 4 life.html" style="color:white;">FISH 4 LIFE PLAY IT NOW</a> &nbsp;&nbsp;&nbsp;
+      <a href="    propaganda/busdriver.html" style="color:white;">SHOULD I GIVE THE DRIVER MY COINS!!!!</a> &nbsp;&nbsp;&nbsp;
+      <a href="    propaganda/geoguess.html" style="color:white;">THE GOVERNMENT IS USING VIDEOGAMES FOR SURVELIENCE</a> &nbsp;&nbsp;&nbsp;      
 
     </div>
   </div>
 </div>
+
+</li>
+</ul>
+
 
 <head>
             <meta name="viewport" content="width=device-width, initial-scale=1">
