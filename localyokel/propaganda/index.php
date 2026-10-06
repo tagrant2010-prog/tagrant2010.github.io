@@ -1,0 +1,314 @@
+<html>
+<html>
+<style>
+body {background-color: #142440;color: #f1f1f1;}
+html {  scroll-padding-top: 90px; 
+  scroll-behavior: smooth;}
+
+ul {
+
+list-style-type: none;
+margin: 0;
+padding: 0;
+overflow: hidden;
+
+
+}
+li {
+float: left;
+margin-left: 10px; 
+}
+li a, .dropbtn {
+display: block;
+color: black;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+background-color: grey;
+}
+
+li.dropdown {
+display: block;
+}
+a {
+  color: aliceblue;
+}
+.dropdown-content {
+display: none;
+position: absolute;
+background-color: #f9f9f9;
+min-width: 20px;
+
+z-index: 1;
+float: none;
+}
+
+.dropdown-content li, a {
+color: black;
+padding: 5px 8px;
+text-decoration: none;
+display: block;
+text-align: left;
+float: none;
+
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;color: black;}
+
+.dropdown:hover .dropdown-content {
+display: block;
+float: none;
+;
+}
+/* division */ 
+.navbar {
+  overflow: visible;
+  background-color: whitesmoke;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  
+}
+
+
+
+
+ul.navbar {
+  background: lightblue url(Grey_teal.JPG) no-repeat center;
+  background-size: cover;
+  align-items: center;
+  color: aliceblue;
+  justify-content: center;
+  height: 100;
+  padding-top: 20;
+  font-size: 2vw;
+  font-weight: 600;
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: -6.9;
+  display: flex; 
+  width: 100%;
+}
+
+.propaganda {
+  overflow: visible;
+  background-color: whitesmoke;
+  position: fixed;
+  bottom: 0;
+  width: 120%;
+  
+}
+
+
+
+
+ul.propaganda {
+  background: lightblue url(Grey_teal.JPG) no-repeat center;
+  background-size: cover;
+  align-items: center;
+  color: aliceblue;
+  justify-content: center;
+  height: 70;
+  padding-top: 20;
+  font-size: 1vw;
+  font-weight: 600;
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: -6.9;
+  display: flex; 
+  width: 100%;
+  float: left;
+}
+li.propaganda {
+  align-items: center;
+  color: aliceblue;
+  justify-content: center;
+  height: 70;
+  padding-top: 20;
+  font-size: 1vw;
+  font-weight: 600;
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: -6.9;
+  display: flex; 
+  width: 100%;
+   z-index: 100;
+}
+iframe.propaganda {
+  align-items: center;
+  color: aliceblue;
+  justify-content: center;
+  height: 70;
+  padding-top: 20;
+  font-size: 1vw;
+  font-weight: 600;
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: -6.9;
+  display: flex; 
+  width: 100%;
+  
+}
+
+.button {
+    background-color: #007bff;   
+  color: #ffffff;           
+  padding: 12px 24px;         
+
+  border-radius: 6px;          
+  border: 2px solid #0056b3;   
+
+  font-family: sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;  
+  letter-spacing: 0.5px;
+  
+
+  cursor: pointer;
+  transition: all 0.3s ease;  
+}
+
+
+
+.search-container {
+  font-size: 1vw;
+}
+
+.instruction {
+  width: 50%;       /* Element must be narrower than its parent */
+  margin: 0 auto;   /* 0 for top/bottom, auto handles left/right spacing */
+  display: block;
+}
+.main {
+  padding: 0px;
+  margin-top: 70px;
+  height: 100px;
+  margin-left: 70px;
+  
+}
+/* Container holds both images in the same exact spot */
+.image-container {
+  position: relative;
+  display: inline-block;
+  width: 300px; /* Adjust to match your image size */
+  height: 200px;
+}
+
+/* Base setup for both images */
+.image-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+}
+
+/* Hide the hover image by making it transparent */
+.hover-image {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out; /* Controls the fade speed */
+}
+
+/* Reveal the hover image when mousing over the container */
+.image-container:hover .hover-image {
+  opacity: 1;
+}
+
+
+.marquee-container {
+  overflow: hidden;
+  width: 100%;
+  background: rgba(21, 34, 82, 0.5);
+  /* Modern frosted glass blur effect */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); 
+  padding: 1rem 0;
+}
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: scroll-ltr 10s linear infinite;
+}
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+.marquee-text {
+  display: flex;
+  white-space: nowrap;
+}
+.marquee-text a {
+  
+  color: #00ffcc;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 0 2rem; 
+}
+.marquee-text a:hover {
+  text-decoration: underline;
+}
+
+@keyframes scroll-ltr {
+  from { transform: translateX(50%); }
+  to { transform: translateX(0); }
+}
+
+</style>
+<ul class="navbar" >
+<li><a href="../index.html" style="  color: aliceblue; ">Local</a></li>
+<li><a href="../games/index.html" style="  color: aliceblue;">Games</a></li>
+<li class="dropdown">
+  <a href="../quotes.html" class="dropbtn" style="  color: aliceblue">Quotes</a>
+  <ul class="dropdown-content">
+    <li><a href="../quotes.html#Sise" style="font-size: 1rem;" >Mr Sise</a></li>
+    <li><a href="../quotes.html#Assorted" style="font-size: 1rem;" >Assorted</a></li>
+  </ul>
+  </li>
+<li><a href="    ../about.html" style="  color: aliceblue; ">About</a></li>
+<li><a href="    ../liedetector.html" style="  color: aliceblue; ">TRUTH</a></li>
+
+</ul>
+<ul class="propaganda">
+<li>
+<div class="marquee-container">
+  <div class="marquee-track">
+    <div class="marquee-text">
+      <a href="    ../propaganda/flock.html" style="color:White;">Flock cameras are replacing all the drone birds that America is killing, Thats why their called Flock<sub> Like how birds flock</sub></a> &nbsp;&nbsp;&nbsp;
+      <a href="   ../games/Fish 4 life.html" style="color:white;">FISH 4 LIFE PLAY IT NOW</a> &nbsp;&nbsp;&nbsp;
+      <a href="    ../propaganda/busdriver.html" style="color:white;">SHOULD I GIVE THE DRIVER MY COINS!!!!</a> &nbsp;&nbsp;&nbsp;
+      <a href="    ../propaganda/geoguess.html" style="color:white;">THE GOVERNMENT IS USING VIDEOGAMES FOR SURVELIENCE</a> &nbsp;&nbsp;&nbsp;
+
+    </div>
+    <div class="marquee-text" aria-hidden="true">
+      <a href="    ../propaganda/flock.html" style="color:White;">Flock cameras are replacing all the drone birds that America is killing, Thats why their called Flock<sub> Like how birds flock</sub></a> &nbsp;&nbsp;&nbsp;
+      <a href="    ../games/Fish 4 life.html" style="color:white;">FISH 4 LIFE PLAY IT NOW</a> &nbsp;&nbsp;&nbsp;
+      <a href="    ../propaganda/busdriver.html" style="color:white;">SHOULD I GIVE THE DRIVER MY COINS!!!!</a> &nbsp;&nbsp;&nbsp;
+      <a href="    ../propaganda/geoguess.html" style="color:white;">THE GOVERNMENT IS USING VIDEOGAMES FOR SURVELIENCE</a> &nbsp;&nbsp;&nbsp;      
+
+    </div>
+  </div>
+</div>
+
+</li>
+</ul>
+    <head>
+    <head>
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+<div class="main" style="display: flex; justify-content: center; ">
+<ul class="main">
+<li> <a href="Fish 4 life.html" class="button" style="padding-bottom: -1px;">Fish 4 Life</a></li>
+<li> <p style="padding-top: -1px;">A small fishing game</p></li>
+</ul>
+</div>
+</body>
+
