@@ -1,41 +1,9 @@
 <html>
 <head>
+      <div id="header-placeholder"></div>
       <link rel="stylesheet" href="style.css">
 </head>
-<ul class="navbar" >
-<li><a href="index.html" style="  color: aliceblue; ">Local</a></li>
-<li><a href="games/index.html" style="  color: aliceblue;">Games</a></li>
-<li class="dropdown">
-  <a href="quotes.html" class="dropbtn" style="  color: aliceblue">Quotes</a>
-  <ul class="dropdown-content">
-    <li><a href="quotes.html#Sise" style="font-size: 1rem;" >Mr Sise</a></li>
-    <li><a href="quotes.html#Assorted" style="font-size: 1rem;" >Assorted</a></li>
-  </ul>
-  </li>
-<li><a href="    about.html" style="  color: aliceblue; ">About</a></li>
-<li><a href="    liedetector.html" style="  color: aliceblue; ">TRUTH</a></li>
 
-</ul>
-<ul class="propaganda">
-<li>
-<div class="marquee-container">
-  <div class="marquee-track">
-    <div class="marquee-text">
-      <a href="    propaganda/flock.html" style="color:White;">Flock cameras are replacing all the drone birds that America is killing, Thats why their called Flock<sub> Like how birds flock</sub></a> &nbsp;&nbsp;&nbsp;
-      <a href="    games/Fish 4 life.html" style="color:white;">FISH 4 LIFE PLAY IT NOW</a> &nbsp;&nbsp;&nbsp;
-      <a href="    propaganda/busdriver.html" style="color:white;">SHOULD I GIVE THE DRIVER MY COINS!!!!</a> &nbsp;&nbsp;&nbsp;
-      <a href="    propaganda/geoguess.html" style="color:white;">THE GOVERNMENT IS USING VIDEOGAMES FOR SURVELIENCE</a> &nbsp;&nbsp;&nbsp;
-
-    </div>
-    <div class="marquee-text" aria-hidden="true">
-      <a href="    propaganda/flock.html" style="color:White;">Flock cameras are replacing all the drone birds that America is killing, Thats why their called Flock<sub> Like how birds flock</sub></a> &nbsp;&nbsp;&nbsp;
-      <a href="    games/Fish 4 life.html" style="color:white;">FISH 4 LIFE PLAY IT NOW</a> &nbsp;&nbsp;&nbsp;
-      <a href="    propaganda/busdriver.html" style="color:white;">SHOULD I GIVE THE DRIVER MY COINS!!!!</a> &nbsp;&nbsp;&nbsp;
-      <a href="    propaganda/geoguess.html" style="color:white;">THE GOVERNMENT IS USING VIDEOGAMES FOR SURVELIENCE</a> &nbsp;&nbsp;&nbsp;      
-
-    </div>
-  </div>
-</div>
 </head>
 <body>
   <div class="main" style="padding-top: 70px;">
@@ -51,4 +19,11 @@ document['\u0061\u0064\u0064\u0045\u0076\u0065\u006E\u0074\u004C\u0069\u0073\u00
 
   </script>
 </body>
+<script>
+  fetch('/localyokel/default.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('header-placeholder').innerHTML = data;
+    });
+</script>
 </html>
