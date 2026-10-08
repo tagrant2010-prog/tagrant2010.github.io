@@ -3,6 +3,7 @@
 </li>
 </ul>
     <head>
+          <div id="header-placeholder"></div>
 <meta name="viewport" content="width=device-width, initial-scale=1">
             <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
       <link id="favicon" rel="icon" type="image/png" href="metalcoin.png">
@@ -185,7 +186,7 @@ document.write('<a class="main" style="color: white;" href="' + loc + '">' + tex
   fetch('/localyokel/default.html')
     .then(response => response.text())
     .then(data => {
-      document.getElementById('navbar').innerHTML = data;
+      document.getElementById('header-placeholder').innerHTML = data;
     });
 </script>
 
