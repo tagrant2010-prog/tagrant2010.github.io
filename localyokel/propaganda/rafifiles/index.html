@@ -1,24 +1,23 @@
-</ul>
-    <head>
-          <div id="header-placeholder"></div>
+<html>
+<html>
+ <link rel="stylesheet" href="style.css">
+  <div id="header-placeholder"></div>
+<title> Tuff Quotes - Local Yokel </title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-            <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-      <link id="favicon" rel="icon" type="image/png" href="metalcoin.png">
-    <link rel="stylesheet" href="style.css">
-    </head>
 
-
+</head>
+<body>
 
 <body>
     <div class="main">
   <p1>Rafi has done some fucked up things, so here are the some of the evil things he has done</p1>
     </div>
 </body>
-
-<script>
+  <script>
   fetch('/localyokel/default.html')
     .then(response => response.text())
     .then(data => {
       document.getElementById('header-placeholder').innerHTML = data;
     });
 </script>
+</html>
