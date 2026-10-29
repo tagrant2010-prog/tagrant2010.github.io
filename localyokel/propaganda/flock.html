@@ -78,4 +78,11 @@
 
     </div>
 </body>
+    <script>
+  fetch('/localyokel/default.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('header-placeholder').innerHTML = data;
+    });
+</script>
 </html>
